@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<div id="wrapper">
+
+    <p>Your Gold: {{session['totalgold']}}</p>
+    
+    <div class="formbox">
+        <form action="/process_money" method="post">
+            <p>Farm</p><p>(earns 10-20)</p>
+            <input type="hidden" name="building" value="farm" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+    <div class="formbox">
+        <form action="/process_money" method="post">
+            <p>Cave</p>
+            <p>(earns 5-10)</p>
+            <input type="hidden" name="building" value="cave" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+    <div class="formbox">
+        <form action="/process_money" method="post">
+            <p>House</p>
+            <p>(earns 2-5)</p>
+            <input type="hidden" name="building" value="farm" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+    <div class="formbox">
+        <form action="/process_money" method="post">
+            <p>Casino</p>
+            <p>(earns/loses 0-50)</p>
+            <input type="hidden" name="building" value="casino" />
+            <input type="submit" value="Find Gold!" />
+        </form>
+    </div>
+    {% if (nav!=''): %}
+    <p><br>
+    <textarea rows=5 cols=60 id="activities" readonly>{{session['activity']}}</textarea></p>
+    {% endif %}
+
+    <textarea rows=5 cols=60 id="test">{{ somevalue}}</textarea></p>
+    <Br><a href="/reset">RESET</a></Br>
+</div>  
+</body>
+
+</html>

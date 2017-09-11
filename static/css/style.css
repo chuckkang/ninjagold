@@ -1,0 +1,23 @@
+body {
+    width:100%;
+    margin: auto;
+}
+
+#wrapper{
+    border: 2px solid green;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+.formbox {
+    border: 2px solid green;
+    width: 20%;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
